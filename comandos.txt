@@ -1,0 +1,31 @@
+NOME: DIOGO DAVID MACEDO SENA
+
+LISTA DE COMANDOS EM ORDEM CRONOLÓGICA:
+git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead
+cd curso-branchs-ifrn-ead/
+// Criei manualmente o arquivo texto.txt
+git status
+git add .
+git commit -m 'Criacao do arquivo texto.txt'
+git checkout -b feature-1
+// estando na branch feature-1, modifiquei o arquivo
+git status
+git add .
+git commit -m 'Atualizacao do arquivo texto.txt'
+git checkout main
+// modifiquei o arquivo
+git status
+git add .
+git commit -m 'Alteracao do conteudo do arquivo texto.txt'
+git merge feature-1
+// CONFLICT (content): Merge conflict in texto.txt
+// Resolvi o conflito manualmente e em seguida fiz o commit
+git add .
+git commit -m 'Correcao do conflito de merge'
+git checkout -b add-comandos
+// criei o arquivo comandos.txt
+//criando o repositório remoto
+git remote add origin-atividade https://github.com/diogodmsena/curso-git-atividade-2.git
+//subir as branchs para o repositório remoto
+git push -u origin-atividade main
+git push -u origin-atividade add-comandos
