@@ -26,6 +26,8 @@ git checkout -b add-comandos
 // criei o arquivo comandos.txt
 //criando o repositório remoto
 git remote add origin-atividade https://github.com/diogodmsena/curso-git-atividade-2.git
+git add comandos.txt
+git commit -m 'Lista de comandos executados na tarefa'
 //subir as branchs para o repositório remoto
 git push -u origin-atividade main
 git push -u origin-atividade add-comandos
