@@ -1,33 +1,45 @@
 NOME: DIOGO DAVID MACEDO SENA
 
 LISTA DE COMANDOS EM ORDEM CRONOLÓGICA:
+// Clonar o repositório para uma posta local
 git clone https://gitlab.com/mizael.cortez/curso-branchs-ifrn-ead
 cd curso-branchs-ifrn-ead/
-// Criei manualmente o arquivo texto.txt
+
+// Criei manualmente o arquivo texto.txt e efetuei o commit
 git status
 git add .
 git commit -m 'Criacao do arquivo texto.txt'
+
+// Criei a branch e modifiquei o arquivo
 git checkout -b feature-1
-// estando na branch feature-1, modifiquei o arquivo
 git status
 git add .
 git commit -m 'Atualizacao do arquivo texto.txt'
+
+// Retornei para a branch principal e modifiquei novamente o arquivo
 git checkout main
-// modifiquei o arquivo
 git status
 git add .
 git commit -m 'Alteracao do conteudo do arquivo texto.txt'
+
+// tentei efetuar o merge entre as branchs
 git merge feature-1
 // CONFLICT (content): Merge conflict in texto.txt
+
 // Resolvi o conflito manualmente e em seguida fiz o commit
 git add .
 git commit -m 'Correcao do conflito de merge'
+
+// Criei a branch add-comandos 
 git checkout -b add-comandos
-// criei o arquivo comandos.txt
+
 //criando o repositório remoto
 git remote add origin-atividade https://github.com/diogodmsena/curso-git-atividade-2.git
+
+// Criei o arquivo com a lista de comandos executados na tarefa
 git add comandos.txt
 git commit -m 'Lista de comandos executados na tarefa'
-//subir as branchs para o repositório remoto
+
+// Subi as branchs para o repositório remoto e fiz o PR direto pelo GitHub
 git push -u origin-atividade main
 git push -u origin-atividade add-comandos
